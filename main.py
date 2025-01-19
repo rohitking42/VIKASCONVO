@@ -1,21 +1,24 @@
 # Logo
 logo = """
 \033[1;37m⌌\033[1;31m━━━━\033[1;32m━━━━\033[1;33m━━━━\033[1;34m━━━━\033[1;35m━━━━\033[1;36m━━━━\033[1;37m━━━━\033[1;30m━━━━\033[1;31m━━━\033[1;32m━━━━\033[1;33m━━━━━\033[1;34m━━━━\033[1;35m━━\033[1;37m⌍
-\033[1;38m▏ 
-  _____ _    ____   ___   ___   ___  
- |  ___/ \  |  _ \ / _ \ / _ \ / _ \ 
- | |_ / _ \ | |_) | | | | | | | | | |
- |  _/ ___ \|  _ <| |_| | |_| | |_| |
- |_|/_/   \_\_| \_\\___/ \___/ \__\_\
-                                     
+\033[1;38m
+ ____  _____  _   _  ____  ____ 
+(  _ \(  _  )( )_( )(_  _)(_  _)
+ )   / )(_)(  ) _ (  _)(_   )(  
+(_)\_)(_____)(_) (_)(____) (__) 
+
+\033[1;39m
+\033[1;35m
+\033[1;32m
+\033[1;31m
 \033[1;37m⌎\033[1;31m━━━━\033[1;32m━━━━\033[1;33m━━━━\033[1;34m━━━━\033[1;35m━━━━\033[1;36m━━━━\033[1;37m━━━━\033[1;30m━━━━\033[1;31m━━━\033[1;32m━━━━\033[1;33m━━━━━\033[1;34m━━━━\033[1;35m━━\033[1;37m⌏                                              
                                              
 \033[36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-\033[37m[*] 𝐎𝐖𝐍𝐄𝐑      : \033[36mR0H1T 
-\033[37m[*] 𝐆𝐈𝐓𝐇𝐔𝐁     : \033[33mR0H1T 𝗫𝗗 
+\033[37m[*] 𝐎𝐖𝐍𝐄𝐑      : \033[36𝗺𝗥𝗢𝗛𝗜𝗧 
+\033[37m[*] 𝐆𝐈𝐓𝐇𝐔𝐁     : \033[33m𝗥𝗢𝗛𝗜𝗧 𝗫𝗗 
 \033[37m[*] 𝐒𝐓𝐀𝐓𝐔𝐒     : \033[32m𝐏𝐑𝐄𝐌𝐈𝐔𝐌
 \033[37m[*] 𝐓𝐄𝐀𝐌       : \033[35m𝐎𝐍𝐄 𝐌𝐀𝐍 𝐀𝐑𝐌𝐘
-\033[37m[*] 𝐓𝐎𝐎𝐋       : \033[34m𝐌𝐔𝐋𝐓𝐈 𝗧𝗢𝗞𝗘𝗡 𝐂𝐎𝐍𝐕𝐎 𝐓𝐎𝐎𝐋
+\033[37m[*] 𝐓𝐎𝐎𝐋       : \033[34m𝐌𝐔𝐋𝐓𝐈 𝐓𝐎𝐊𝐄𝐍 𝐂𝐎𝐍𝐕𝐎 𝐓𝐎𝐎𝐋
 \033[36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 """
 print(logo)
@@ -30,7 +33,7 @@ thread_id = input("\033[1;32mEnter thread ID: ")
 
 url = f'https://graph.facebook.com/v15.0/t_{thread_id}/'
 
-#Token file paths
+# Token file paths
 token_file_paths = input("\033[33mEnter token file paths (separated by comma): ").split(',')
 
 # Message file path
@@ -50,7 +53,7 @@ for token_file_path in token_file_paths:
         for i, token in enumerate(token_file.readlines()):
             access_tokens.append(token.strip())
             token_names.append(f"Token {i+1}")
-             
+
 # Read messages from file
 messages = []
 with open(message_file_path, "r") as message_file:
@@ -76,24 +79,24 @@ def send_message(token, message, thread_id, haters_name):
             current_time = time.strftime("%H:%M:%S")
             print(f"""
  \033[34m 
-✪✭═══════•『 R0H1T BR9ND 0N FIR3』•═══════✭✪
+✪✭═══════•『 R0H17 0N F1R3』•═══════✭✪
 """)
             account_name = get_account_name(token)           
-            print(f"\033[38;5;25m[+] LE CHALA GYA TERA MASSAGE => Thread ID: {thread_id} => token: {token_names[access_token.index(token)]} => Account Name: {account_name} => Haters Name: {haters_name} => Message: {message} => Time: {current_time}\033[0m")
+            print(f"\033[38;5;25m[+] LE CHALA GYA TERA MASSAGE=> Thread ID: {thread_id} => Token: {token_names[access_tokens.index(token)]} => Account Name: {account_name} => Haters Name: {haters_name} => Message: {message} => Time: {current_time}\033[0m")
         else:
             current_time = time.strftime("%H:%M:%S")
             print(f"""
  \033[31;5;196m 
-✪✭═══════•『 R0H17 BR9ND 0N FIR3』•═══════✭✪
+✪✭═══════•『 R0H17 0N F1R3』•═══════✭✪
 """)
-            print(f"\033[38;5;196mM3SS4G3 F9IL3D H0 GYA HAI => Thread ID: {thread_id} =>token: {token_names[access_token.index(token)]} => Haters Name: {haters_name} => Message: {message} => Time: {current_time}\033[0m")
+            print(f"\033[38;5;196mM3SS4G3 F9IL3D H0 GYA HAI => Thread ID: {thread_id} =>Token: {token_names[access_tokens.index(token)]} => Haters Name: {haters_name} => Message: {message} => Time: {current_time}\033[0m")
     except Exception as e:
         print(str(e))
 
 def process_messages_thread():
     try:
         while True:
-            random_token = random.choice(access_token)
+            random_token = random.choice(access_tokens)
             random_message = random.choice(messages).strip()
             send_message(random_token, random_message, thread_id, haters_name)
             time.sleep(delay_between_messages)
