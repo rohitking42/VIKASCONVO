@@ -48,7 +48,9 @@ token_names = []
 for token_file_path in token_file_paths:
     with open(token_file_path.strip(), "r") as token_file:
         for i, token in enumerate(token_file.readlines()):
-             {i+1}")
+            access_tokens.append(token.strip())
+            token_names.append(f"Token {i+1}")
+             
 # Read messages from file
 messages = []
 with open(message_file_path, "r") as message_file:
