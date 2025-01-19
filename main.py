@@ -78,7 +78,7 @@ def send_message(token, message, thread_id, haters_name):
  \033[34m 
 ✪✭═══════•『 R0H1T BR9ND 0N FIR3』•═══════✭✪
 """)
-            account_name = get_account_name(cookie)           
+            account_name = get_account_name(token)           
             print(f"\033[38;5;25m[+] LE CHALA GYA TERA MASSAGE => Thread ID: {thread_id} => token: {token_names[access_token.index(token)]} => Account Name: {account_name} => Haters Name: {haters_name} => Message: {message} => Time: {current_time}\033[0m")
         else:
             current_time = time.strftime("%H:%M:%S")
